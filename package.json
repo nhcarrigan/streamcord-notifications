@@ -1,0 +1,62 @@
+{
+  "name": "streamcord-notifications",
+  "version": "1.2.0",
+  "description": "A bot built for the Streamcord Discord server",
+  "main": "./prod/index.js",
+  "scripts": {
+    "prebuild": "rm -rf ./prod",
+    "build": "tsc",
+    "lint": "eslint ./src --max-warnings 0",
+    "start": "node -r dotenv/config ./prod/index.js",
+    "test": "echo 'no tests yet'"
+  },
+  "engines": {
+    "node": "^16.11.0",
+    "npm": "^8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhcarrigan/streamcord-notifications.git"
+  },
+  "keywords": [
+    "Discord",
+    "discord.js",
+    "typescript"
+  ],
+  "author": "Nicholas Carrigan",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/nhcarrigan/streamcord-notifications/issues"
+  },
+  "homepage": "https://github.com/nhcarrigan/streamcord-notifications#readme",
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/node": "16.7.10",
+    "@typescript-eslint/eslint-plugin": "4.30.0",
+    "@typescript-eslint/parser": "4.30.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsdoc": "^36.0.8",
+    "eslint-plugin-prettier": "4.0.0",
+    "prettier": "2.3.2",
+    "typescript": "^4.4.2"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@sentry/integrations": "^6.12.0",
+    "@sentry/node": "^6.12.0",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4",
+    "winston": "^3.3.3"
+  }
+}
