@@ -1,4 +1,4 @@
-import { TextChannel } from "discord.js";
+import { MessageEmbed, TextChannel } from "discord.js";
 
 import NotificationModel, {
   NotificationInt,
@@ -30,7 +30,9 @@ const sendReminder = async (
       }
     }
 
-    const sent = await channel.send(content);
+    const embed = new MessageEmbed().setDescription(content).setColor(0x9146ff);
+
+    const sent = await channel.send({ embeds: [embed] });
 
     const data = await NotificationModel.findOne({ number: number });
 
