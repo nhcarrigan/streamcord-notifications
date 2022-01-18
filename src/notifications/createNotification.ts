@@ -1,5 +1,5 @@
 /* eslint-disable jsdoc/require-jsdoc */
-import { GuildBasedChannel, GuildChannel, MessageEmbed } from "discord.js";
+import { GuildBasedChannel, MessageEmbed } from "discord.js";
 
 import NotificationModel from "../database/NotificationModel";
 import { NotificationHandler } from "../interfaces/NotificationHandler";
