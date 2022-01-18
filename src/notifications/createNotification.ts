@@ -1,5 +1,5 @@
 /* eslint-disable jsdoc/require-jsdoc */
-import { GuildChannel, MessageEmbed } from "discord.js";
+import { GuildBasedChannel, MessageEmbed } from "discord.js";
 
 import NotificationModel from "../database/NotificationModel";
 import { NotificationHandler } from "../interfaces/NotificationHandler";
@@ -14,7 +14,7 @@ export const createNotification: NotificationHandler = async (
     const channel = interaction.options.getChannel(
       "channel",
       true
-    ) as GuildChannel;
+    ) as GuildBasedChannel;
     const time = interaction.options.getNumber("time", true);
     const content = interaction.options.getString("content", true);
 
