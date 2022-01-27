@@ -23,7 +23,7 @@
     "discord.js",
     "typescript"
   ],
-  "author": "Nicholas Carrigan",
+  "author": "Naomi Carrigan",
   "license": "AGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/nhcarrigan/streamcord-notifications/issues"
